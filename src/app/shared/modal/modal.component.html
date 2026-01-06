@@ -1,0 +1,40 @@
+<!-- src/app/shared/modal/modal.component.html -->
+<div *ngIf="isOpen()" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50" (click)="closeModal()">
+  <div (click)="$event.stopPropagation()" class="bg-white rounded-lg shadow-2xl w-full max-w-sm overflow-hidden transform transition-all">
+    
+    <!-- Header -->
+    <div class="px-6 py-4 border-b" [ngClass]="{
+      'bg-green-100': modalType() === 'success',
+      'bg-red-100': modalType() === 'error',
+      'bg-blue-100': modalType() === 'info'
+    }">
+      <h3 class="text-lg font-semibold" [ngClass]="{
+        'text-green-800': modalType() === 'success',
+        'text-red-800': modalType() === 'error',
+        'text-blue-800': modalType() === 'info'
+      }">
+        {{ modalType() === 'success' ? 'Success' : modalType() === 'error' ? 'Error' : 'Notification' }}
+      </h3>
+    </div>
+
+    <!-- Body -->
+    <div class="p-6">
+      <p class="text-gray-700 text-base">{{ message() }}</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="px-6 py-4 bg-gray-50 text-right">
+      <button 
+        (click)="closeModal()"
+        class="px-4 py-2 rounded-md text-white font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2"
+        [ngClass]="{
+          'bg-green-600 hover:bg-green-700 focus:ring-green-500': modalType() === 'success',
+          'bg-red-600 hover:bg-red-700 focus:ring-red-500': modalType() === 'error',
+          'bg-blue-600 hover:bg-blue-700 focus:ring-blue-500': modalType() === 'info'
+        }"
+      >
+        Close
+      </button>
+    </div>
+  </div>
+</div>

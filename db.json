@@ -1,0 +1,93 @@
+{
+  "users": [
+    {
+      "id": "12345",
+      "password": "password123",
+      "name": "Alice Smith",
+      "balance": 1500.75
+    },
+    {
+      "id": "67890",
+      "password": "securepass",
+      "name": "Bob Johnson",
+      "balance": 250
+    },
+    {
+      "id": "gabriel",
+      "password": "1977",
+      "name": "Gabriel",
+      "balance": 800
+    },
+    {
+      "id": "2123",
+      "password": "2123",
+      "name": "Liam",
+      "balance": 0.5
+    }
+  ],
+  "transactions": [
+    {
+      "id": "t001",
+      "userId": "12345",
+      "type": "deposit",
+      "amount": 500,
+      "date": "2026-01-01T10:00:00Z"
+    },
+    {
+      "id": "t002",
+      "userId": "12345",
+      "type": "withdrawal",
+      "amount": 50.25,
+      "date": "2026-01-02T15:30:00Z"
+    },
+    {
+      "id": "t003",
+      "userId": "67890",
+      "type": "deposit",
+      "amount": 100,
+      "date": "2026-01-03T11:45:00Z"
+    },
+    {
+      "userId": "gabriel",
+      "type": "deposit",
+      "amount": 1200,
+      "date": "2026-01-05T01:45:19.260Z",
+      "id": "_Z-wCMF"
+    },
+    {
+      "userId": "gabriel",
+      "type": "withdrawal",
+      "amount": 300,
+      "date": "2026-01-05T01:45:29.733Z",
+      "id": "jfv2cT-"
+    },
+    {
+      "userId": "gabriel",
+      "type": "withdrawal",
+      "amount": 200,
+      "date": "2026-01-05T01:45:35.484Z",
+      "id": "5skijl1"
+    },
+    {
+      "userId": "gabriel",
+      "type": "deposit",
+      "amount": 100,
+      "date": "2026-01-05T01:54:45.807Z",
+      "id": "iRrHi-c"
+    },
+    {
+      "userId": "2123",
+      "type": "deposit",
+      "amount": 100,
+      "date": "2026-01-05T01:56:05.792Z",
+      "id": "UBF5Cu6"
+    },
+    {
+      "userId": "2123",
+      "type": "withdrawal",
+      "amount": 99.5,
+      "date": "2026-01-05T01:56:16.852Z",
+      "id": "SpT0uz8"
+    }
+  ]
+}
